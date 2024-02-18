@@ -1,0 +1,838 @@
+Archive member included to satisfy reference by file (symbol)
+
+/usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
+                              /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o (exit)
+/usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_copy_data.o)
+                              ./portable/MemMang/heap_2.o (__do_copy_data)
+/usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_clear_bss.o)
+                              ./portable/MemMang/heap_2.o (__do_clear_bss)
+/usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libc.a(memcpy.o)
+                              ./queue.o (memcpy)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+text             0x0000000000000000 0x0000000000008000 xr
+data             0x0000000000800100 0x0000000000000800 rw !x
+eeprom           0x0000000000810000 0x0000000000000400 rw !x
+fuse             0x0000000000820000 0x0000000000000003 rw !x
+lock             0x0000000000830000 0x0000000000000400 rw !x
+signature        0x0000000000840000 0x0000000000000400 rw !x
+user_signatures  0x0000000000850000 0x0000000000000400 rw !x
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+Address of section .data set to 0x800100
+LOAD /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+LOAD ./portable/MemMang/heap_2.o
+LOAD ./portable/GCC/ATMega328p/port.o
+LOAD ./croutine.o
+LOAD ./event_groups.o
+LOAD ./list.o
+LOAD ./main.o
+LOAD ./queue.o
+LOAD ./tasks.o
+LOAD ./timers.o
+START GROUP
+LOAD /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a
+LOAD /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libm.a
+LOAD /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libc.a
+LOAD /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libatmega328p.a
+END GROUP
+                0x0000000000000000                __TEXT_REGION_ORIGIN__ = DEFINED (__TEXT_REGION_ORIGIN__)?__TEXT_REGION_ORIGIN__:0x0
+                [0x0000000000800100]                __DATA_REGION_ORIGIN__ = DEFINED (__DATA_REGION_ORIGIN__)?__DATA_REGION_ORIGIN__:0x800060
+                [0x0000000000008000]                __TEXT_REGION_LENGTH__ = DEFINED (__TEXT_REGION_LENGTH__)?__TEXT_REGION_LENGTH__:0x20000
+                [0x0000000000000800]                __DATA_REGION_LENGTH__ = DEFINED (__DATA_REGION_LENGTH__)?__DATA_REGION_LENGTH__:0xffa0
+                [0x0000000000000400]                __EEPROM_REGION_LENGTH__ = DEFINED (__EEPROM_REGION_LENGTH__)?__EEPROM_REGION_LENGTH__:0x10000
+                [0x0000000000000003]                __FUSE_REGION_LENGTH__ = DEFINED (__FUSE_REGION_LENGTH__)?__FUSE_REGION_LENGTH__:0x400
+                0x0000000000000400                __LOCK_REGION_LENGTH__ = DEFINED (__LOCK_REGION_LENGTH__)?__LOCK_REGION_LENGTH__:0x400
+                0x0000000000000400                __SIGNATURE_REGION_LENGTH__ = DEFINED (__SIGNATURE_REGION_LENGTH__)?__SIGNATURE_REGION_LENGTH__:0x400
+                0x0000000000000400                __USER_SIGNATURE_REGION_LENGTH__ = DEFINED (__USER_SIGNATURE_REGION_LENGTH__)?__USER_SIGNATURE_REGION_LENGTH__:0x400
+
+.hash
+ *(.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+ *(.rel.text.*)
+ *(.rel.gnu.linkonce.t*)
+
+.rela.text
+ *(.rela.text)
+ *(.rela.text.*)
+ *(.rela.gnu.linkonce.t*)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+ *(.rel.rodata.*)
+ *(.rel.gnu.linkonce.r*)
+
+.rela.rodata
+ *(.rela.rodata)
+ *(.rela.rodata.*)
+ *(.rela.gnu.linkonce.r*)
+
+.rel.data
+ *(.rel.data)
+ *(.rel.data.*)
+ *(.rel.gnu.linkonce.d*)
+
+.rela.data
+ *(.rela.data)
+ *(.rela.data.*)
+ *(.rela.gnu.linkonce.d*)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.text           0x0000000000000000     0x41ea
+ *(.vectors)
+ .vectors       0x0000000000000000       0x68 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+                0x0000000000000000                __vectors
+                0x0000000000000000                __vector_default
+ *(.vectors)
+ *(.progmem.gcc*)
+                0x0000000000000068                . = ALIGN (0x2)
+                0x0000000000000068                __trampolines_start = .
+ *(.trampolines)
+ .trampolines   0x0000000000000068        0x0 linker stubs
+ *(.trampolines*)
+                0x0000000000000068                __trampolines_end = .
+ *libprintf_flt.a:*(.progmem.data)
+ *libc.a:*(.progmem.data)
+ *(.progmem*)
+                0x0000000000000068                . = ALIGN (0x2)
+ *(.jumptables)
+ *(.jumptables*)
+ *(.lowtext)
+ *(.lowtext*)
+                0x0000000000000068                __ctors_start = .
+ *(.ctors)
+                0x0000000000000068                __ctors_end = .
+                0x0000000000000068                __dtors_start = .
+ *(.dtors)
+                0x0000000000000068                __dtors_end = .
+ SORT(*)(.ctors)
+ SORT(*)(.dtors)
+ *(.init0)
+ .init0         0x0000000000000068        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+                0x0000000000000068                __init
+ *(.init0)
+ *(.init1)
+ *(.init1)
+ *(.init2)
+ .init2         0x0000000000000068        0xc /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+ *(.init2)
+ *(.init3)
+ *(.init3)
+ *(.init4)
+ .init4         0x0000000000000074       0x16 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_copy_data.o)
+                0x0000000000000074                __do_copy_data
+ .init4         0x000000000000008a       0x10 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_clear_bss.o)
+                0x000000000000008a                __do_clear_bss
+ *(.init4)
+ *(.init5)
+ *(.init5)
+ *(.init6)
+ *(.init6)
+ *(.init7)
+ *(.init7)
+ *(.init8)
+ *(.init8)
+ *(.init9)
+ .init9         0x000000000000009a        0x8 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+ *(.init9)
+ *(.text)
+ .text          0x00000000000000a2        0x4 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+                0x00000000000000a2                __vector_22
+                0x00000000000000a2                __vector_1
+                0x00000000000000a2                __vector_24
+                0x00000000000000a2                __vector_12
+                0x00000000000000a2                __bad_interrupt
+                0x00000000000000a2                __vector_6
+                0x00000000000000a2                __vector_3
+                0x00000000000000a2                __vector_23
+                0x00000000000000a2                __vector_25
+                0x00000000000000a2                __vector_13
+                0x00000000000000a2                __vector_17
+                0x00000000000000a2                __vector_19
+                0x00000000000000a2                __vector_7
+                0x00000000000000a2                __vector_5
+                0x00000000000000a2                __vector_4
+                0x00000000000000a2                __vector_9
+                0x00000000000000a2                __vector_2
+                0x00000000000000a2                __vector_21
+                0x00000000000000a2                __vector_15
+                0x00000000000000a2                __vector_8
+                0x00000000000000a2                __vector_14
+                0x00000000000000a2                __vector_10
+                0x00000000000000a2                __vector_16
+                0x00000000000000a2                __vector_18
+                0x00000000000000a2                __vector_20
+ .text          0x00000000000000a6        0x0 ./portable/MemMang/heap_2.o
+ .text          0x00000000000000a6        0x0 ./portable/GCC/ATMega328p/port.o
+ .text          0x00000000000000a6        0x0 ./croutine.o
+ .text          0x00000000000000a6        0x0 ./event_groups.o
+ .text          0x00000000000000a6        0x0 ./list.o
+ .text          0x00000000000000a6        0x0 ./main.o
+ .text          0x00000000000000a6        0x0 ./queue.o
+ .text          0x00000000000000a6        0x0 ./tasks.o
+ .text          0x00000000000000a6        0x0 ./timers.o
+ .text          0x00000000000000a6        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
+ .text          0x00000000000000a6        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_copy_data.o)
+ .text          0x00000000000000a6        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_clear_bss.o)
+ .text          0x00000000000000a6        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libc.a(memcpy.o)
+                0x00000000000000a6                . = ALIGN (0x2)
+ *(.text.*)
+ .text.pvPortMalloc
+                0x00000000000000a6      0x1de ./portable/MemMang/heap_2.o
+                0x00000000000000a6                pvPortMalloc
+ .text.vPortFree
+                0x0000000000000284       0xe4 ./portable/MemMang/heap_2.o
+                0x0000000000000284                vPortFree
+ .text.xPortGetFreeHeapSize
+                0x0000000000000368       0x16 ./portable/MemMang/heap_2.o
+                0x0000000000000368                xPortGetFreeHeapSize
+ .text.vPortInitialiseBlocks
+                0x000000000000037e       0x10 ./portable/MemMang/heap_2.o
+                0x000000000000037e                vPortInitialiseBlocks
+ .text.prvHeapInit
+                0x000000000000038e       0x70 ./portable/MemMang/heap_2.o
+ .text.pxPortInitialiseStack
+                0x00000000000003fe      0x352 ./portable/GCC/ATMega328p/port.o
+                0x00000000000003fe                pxPortInitialiseStack
+ .text.xPortStartScheduler
+                0x0000000000000750       0x6a ./portable/GCC/ATMega328p/port.o
+                0x0000000000000750                xPortStartScheduler
+ .text.vPortEndScheduler
+                0x00000000000007ba       0x10 ./portable/GCC/ATMega328p/port.o
+                0x00000000000007ba                vPortEndScheduler
+ .text.vPortYield
+                0x00000000000007ca       0xb4 ./portable/GCC/ATMega328p/port.o
+                0x00000000000007ca                vPortYield
+ .text.vPortYieldFromTick
+                0x000000000000087e       0xbc ./portable/GCC/ATMega328p/port.o
+                0x000000000000087e                vPortYieldFromTick
+ .text.prvSetupTimerInterrupt
+                0x000000000000093a       0xc4 ./portable/GCC/ATMega328p/port.o
+ .text.__vector_11
+                0x00000000000009fe        0x8 ./portable/GCC/ATMega328p/port.o
+                0x00000000000009fe                __vector_11
+ .text.xCoRoutineCreate
+                0x0000000000000a06      0x138 ./croutine.o
+                0x0000000000000a06                xCoRoutineCreate
+ .text.vCoRoutineAddToDelayedList
+                0x0000000000000b3e       0xca ./croutine.o
+                0x0000000000000b3e                vCoRoutineAddToDelayedList
+ .text.prvCheckPendingReadyList
+                0x0000000000000c08       0x9a ./croutine.o
+ .text.prvCheckDelayedList
+                0x0000000000000ca2      0x16e ./croutine.o
+ .text.vCoRoutineSchedule
+                0x0000000000000e10      0x10a ./croutine.o
+                0x0000000000000e10                vCoRoutineSchedule
+ .text.prvInitialiseCoRoutineLists
+                0x0000000000000f1a       0x74 ./croutine.o
+ .text.xCoRoutineRemoveFromEventList
+                0x0000000000000f8e       0x72 ./croutine.o
+                0x0000000000000f8e                xCoRoutineRemoveFromEventList
+ .text.xEventGroupCreate
+                0x0000000000001000       0x40 ./event_groups.o
+                0x0000000000001000                xEventGroupCreate
+ .text.xEventGroupSync
+                0x0000000000001040      0x176 ./event_groups.o
+                0x0000000000001040                xEventGroupSync
+ .text.xEventGroupWaitBits
+                0x00000000000011b6      0x18c ./event_groups.o
+                0x00000000000011b6                xEventGroupWaitBits
+ .text.xEventGroupClearBits
+                0x0000000000001342       0x72 ./event_groups.o
+                0x0000000000001342                xEventGroupClearBits
+ .text.xEventGroupGetBitsFromISR
+                0x00000000000013b4       0x46 ./event_groups.o
+                0x00000000000013b4                xEventGroupGetBitsFromISR
+ .text.xEventGroupSetBits
+                0x00000000000013fa      0x17a ./event_groups.o
+                0x00000000000013fa                xEventGroupSetBits
+ .text.vEventGroupDelete
+                0x0000000000001574       0x68 ./event_groups.o
+                0x0000000000001574                vEventGroupDelete
+ .text.vEventGroupSetBitsCallback
+                0x00000000000015dc       0x3c ./event_groups.o
+                0x00000000000015dc                vEventGroupSetBitsCallback
+ .text.vEventGroupClearBitsCallback
+                0x0000000000001618       0x3c ./event_groups.o
+                0x0000000000001618                vEventGroupClearBitsCallback
+ .text.prvTestWaitCondition
+                0x0000000000001654       0x64 ./event_groups.o
+ .text.vListInitialise
+                0x00000000000016b8       0x6c ./list.o
+                0x00000000000016b8                vListInitialise
+ .text.vListInitialiseItem
+                0x0000000000001724       0x24 ./list.o
+                0x0000000000001724                vListInitialiseItem
+ .text.vListInsertEnd
+                0x0000000000001748       0x9e ./list.o
+                0x0000000000001748                vListInsertEnd
+ .text.vListInsert
+                0x00000000000017e6       0xf0 ./list.o
+                0x00000000000017e6                vListInsert
+ .text.uxListRemove
+                0x00000000000018d6       0xae ./list.o
+                0x00000000000018d6                uxListRemove
+ .text.main     0x0000000000001984       0x3e ./main.o
+                0x0000000000001984                main
+ .text.TaskBlinkGreenLED
+                0x00000000000019c2       0x68 ./main.o
+ .text.xQueueGenericReset
+                0x0000000000001a2a      0x128 ./queue.o
+                0x0000000000001a2a                xQueueGenericReset
+ .text.xQueueGenericCreate
+                0x0000000000001b52       0xd0 ./queue.o
+                0x0000000000001b52                xQueueGenericCreate
+ .text.xQueueGenericSend
+                0x0000000000001c22      0x162 ./queue.o
+                0x0000000000001c22                xQueueGenericSend
+ .text.xQueueGenericSendFromISR
+                0x0000000000001d84       0xc0 ./queue.o
+                0x0000000000001d84                xQueueGenericSendFromISR
+ .text.xQueueGiveFromISR
+                0x0000000000001e44       0xb8 ./queue.o
+                0x0000000000001e44                xQueueGiveFromISR
+ .text.xQueueGenericReceive
+                0x0000000000001efc      0x19c ./queue.o
+                0x0000000000001efc                xQueueGenericReceive
+ .text.xQueueReceiveFromISR
+                0x0000000000002098       0xc2 ./queue.o
+                0x0000000000002098                xQueueReceiveFromISR
+ .text.xQueuePeekFromISR
+                0x000000000000215a       0x78 ./queue.o
+                0x000000000000215a                xQueuePeekFromISR
+ .text.uxQueueMessagesWaiting
+                0x00000000000021d2       0x32 ./queue.o
+                0x00000000000021d2                uxQueueMessagesWaiting
+ .text.uxQueueSpacesAvailable
+                0x0000000000002204       0x4e ./queue.o
+                0x0000000000002204                uxQueueSpacesAvailable
+ .text.uxQueueMessagesWaitingFromISR
+                0x0000000000002252       0x28 ./queue.o
+                0x0000000000002252                uxQueueMessagesWaitingFromISR
+ .text.vQueueDelete
+                0x000000000000227a       0x30 ./queue.o
+                0x000000000000227a                vQueueDelete
+ .text.prvCopyDataToQueue
+                0x00000000000022aa      0x180 ./queue.o
+ .text.prvCopyDataFromQueue
+                0x000000000000242a       0xa2 ./queue.o
+ .text.prvUnlockQueue
+                0x00000000000024cc       0xca ./queue.o
+ .text.prvIsQueueEmpty
+                0x0000000000002596       0x3c ./queue.o
+ .text.xQueueIsQueueEmptyFromISR
+                0x00000000000025d2       0x32 ./queue.o
+                0x00000000000025d2                xQueueIsQueueEmptyFromISR
+ .text.prvIsQueueFull
+                0x0000000000002604       0x44 ./queue.o
+ .text.xQueueIsQueueFullFromISR
+                0x0000000000002648       0x3a ./queue.o
+                0x0000000000002648                xQueueIsQueueFullFromISR
+ .text.xQueueCRSend
+                0x0000000000002682       0xc2 ./queue.o
+                0x0000000000002682                xQueueCRSend
+ .text.xQueueCRReceive
+                0x0000000000002744      0x132 ./queue.o
+                0x0000000000002744                xQueueCRReceive
+ .text.xQueueCRSendFromISR
+                0x0000000000002876       0x82 ./queue.o
+                0x0000000000002876                xQueueCRSendFromISR
+ .text.xQueueCRReceiveFromISR
+                0x00000000000028f8      0x108 ./queue.o
+                0x00000000000028f8                xQueueCRReceiveFromISR
+ .text.xTaskGenericCreate
+                0x0000000000002a00      0x1cc ./tasks.o
+                0x0000000000002a00                xTaskGenericCreate
+ .text.vTaskDelete
+                0x0000000000002bcc       0xb8 ./tasks.o
+                0x0000000000002bcc                vTaskDelete
+ .text.vTaskDelayUntil
+                0x0000000000002c84       0xf4 ./tasks.o
+                0x0000000000002c84                vTaskDelayUntil
+ .text.vTaskDelay
+                0x0000000000002d78       0x6c ./tasks.o
+                0x0000000000002d78                vTaskDelay
+ .text.vTaskStartScheduler
+                0x0000000000002de4       0x6e ./tasks.o
+                0x0000000000002de4                vTaskStartScheduler
+ .text.vTaskEndScheduler
+                0x0000000000002e52       0x1a ./tasks.o
+                0x0000000000002e52                vTaskEndScheduler
+ .text.vTaskSuspendAll
+                0x0000000000002e6c       0x1a ./tasks.o
+                0x0000000000002e6c                vTaskSuspendAll
+ .text.xTaskResumeAll
+                0x0000000000002e86      0x11c ./tasks.o
+                0x0000000000002e86                xTaskResumeAll
+ .text.xTaskGetTickCount
+                0x0000000000002fa2       0x2e ./tasks.o
+                0x0000000000002fa2                xTaskGetTickCount
+ .text.xTaskGetTickCountFromISR
+                0x0000000000002fd0       0x2a ./tasks.o
+                0x0000000000002fd0                xTaskGetTickCountFromISR
+ .text.uxTaskGetNumberOfTasks
+                0x0000000000002ffa       0x12 ./tasks.o
+                0x0000000000002ffa                uxTaskGetNumberOfTasks
+ .text.xTaskIncrementTick
+                0x000000000000300c      0x1de ./tasks.o
+                0x000000000000300c                xTaskIncrementTick
+ .text.vTaskSwitchContext
+                0x00000000000031ea       0xe0 ./tasks.o
+                0x00000000000031ea                vTaskSwitchContext
+ .text.vTaskPlaceOnEventList
+                0x00000000000032ca       0x6c ./tasks.o
+                0x00000000000032ca                vTaskPlaceOnEventList
+ .text.vTaskPlaceOnUnorderedEventList
+                0x0000000000003336       0x8a ./tasks.o
+                0x0000000000003336                vTaskPlaceOnUnorderedEventList
+ .text.xTaskRemoveFromEventList
+                0x00000000000033c0       0xda ./tasks.o
+                0x00000000000033c0                xTaskRemoveFromEventList
+ .text.xTaskRemoveFromUnorderedEventList
+                0x000000000000349a       0xd6 ./tasks.o
+                0x000000000000349a                xTaskRemoveFromUnorderedEventList
+ .text.vTaskSetTimeOutState
+                0x0000000000003570       0x38 ./tasks.o
+                0x0000000000003570                vTaskSetTimeOutState
+ .text.xTaskCheckForTimeOut
+                0x00000000000035a8       0xd0 ./tasks.o
+                0x00000000000035a8                xTaskCheckForTimeOut
+ .text.vTaskMissedYield
+                0x0000000000003678       0x16 ./tasks.o
+                0x0000000000003678                vTaskMissedYield
+ .text.prvIdleTask
+                0x000000000000368e       0x20 ./tasks.o
+ .text.prvInitialiseTCBVariables
+                0x00000000000036ae      0x10c ./tasks.o
+ .text.prvInitialiseTaskLists
+                0x00000000000037ba       0x7c ./tasks.o
+ .text.prvCheckTasksWaitingTermination
+                0x0000000000003836       0x82 ./tasks.o
+ .text.prvAddCurrentTaskToDelayedList
+                0x00000000000038b8       0x96 ./tasks.o
+ .text.prvAllocateTCBAndStack
+                0x000000000000394e       0x86 ./tasks.o
+ .text.prvDeleteTCB
+                0x00000000000039d4       0x30 ./tasks.o
+ .text.prvResetNextTaskUnblockTime
+                0x0000000000003a04       0x5e ./tasks.o
+ .text.uxTaskResetEventItemValue
+                0x0000000000003a62       0x54 ./tasks.o
+                0x0000000000003a62                uxTaskResetEventItemValue
+ .text.ulTaskNotifyTake
+                0x0000000000003ab6      0x11c ./tasks.o
+                0x0000000000003ab6                ulTaskNotifyTake
+ .text.xTaskNotifyWait
+                0x0000000000003bd2      0x16c ./tasks.o
+                0x0000000000003bd2                xTaskNotifyWait
+ .text.xTaskGenericNotify
+                0x0000000000003d3e      0x1c2 ./tasks.o
+                0x0000000000003d3e                xTaskGenericNotify
+ .text.xTaskNotifyFromISR
+                0x0000000000003f00      0x1c0 ./tasks.o
+                0x0000000000003f00                xTaskNotifyFromISR
+ .text.vTaskNotifyGiveFromISR
+                0x00000000000040c0      0x114 ./tasks.o
+                0x00000000000040c0                vTaskNotifyGiveFromISR
+ .text.libgcc.mul
+                0x00000000000041d4        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
+ .text.libgcc.div
+                0x00000000000041d4        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
+ .text.libgcc   0x00000000000041d4        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
+ .text.libgcc.prologue
+                0x00000000000041d4        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
+ .text.libgcc.builtins
+                0x00000000000041d4        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
+ .text.libgcc.fmul
+                0x00000000000041d4        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
+ .text.libgcc.fixed
+                0x00000000000041d4        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
+ .text.libgcc.mul
+                0x00000000000041d4        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_copy_data.o)
+ .text.libgcc.div
+                0x00000000000041d4        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_copy_data.o)
+ .text.libgcc   0x00000000000041d4        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_copy_data.o)
+ .text.libgcc.prologue
+                0x00000000000041d4        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_copy_data.o)
+ .text.libgcc.builtins
+                0x00000000000041d4        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_copy_data.o)
+ .text.libgcc.fmul
+                0x00000000000041d4        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_copy_data.o)
+ .text.libgcc.fixed
+                0x00000000000041d4        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_copy_data.o)
+ .text.libgcc.mul
+                0x00000000000041d4        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_clear_bss.o)
+ .text.libgcc.div
+                0x00000000000041d4        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_clear_bss.o)
+ .text.libgcc   0x00000000000041d4        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_clear_bss.o)
+ .text.libgcc.prologue
+                0x00000000000041d4        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_clear_bss.o)
+ .text.libgcc.builtins
+                0x00000000000041d4        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_clear_bss.o)
+ .text.libgcc.fmul
+                0x00000000000041d4        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_clear_bss.o)
+ .text.libgcc.fixed
+                0x00000000000041d4        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_clear_bss.o)
+ .text.avr-libc
+                0x00000000000041d4       0x12 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libc.a(memcpy.o)
+                0x00000000000041d4                memcpy
+                0x00000000000041e6                . = ALIGN (0x2)
+ *(.fini9)
+ .fini9         0x00000000000041e6        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
+                0x00000000000041e6                exit
+                0x00000000000041e6                _exit
+ *(.fini9)
+ *(.fini8)
+ *(.fini8)
+ *(.fini7)
+ *(.fini7)
+ *(.fini6)
+ *(.fini6)
+ *(.fini5)
+ *(.fini5)
+ *(.fini4)
+ *(.fini4)
+ *(.fini3)
+ *(.fini3)
+ *(.fini2)
+ *(.fini2)
+ *(.fini1)
+ *(.fini1)
+ *(.fini0)
+ .fini0         0x00000000000041e6        0x4 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
+ *(.fini0)
+                0x00000000000041ea                _etext = .
+
+.data           0x0000000000800100       0x14 load address 0x00000000000041ea
+                0x0000000000800100                PROVIDE (__data_start, .)
+ *(.data)
+ .data          0x0000000000800100        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+ .data          0x0000000000800100        0x0 ./portable/MemMang/heap_2.o
+ .data          0x0000000000800100        0x0 ./portable/GCC/ATMega328p/port.o
+ .data          0x0000000000800100        0x0 ./croutine.o
+ .data          0x0000000000800100        0x0 ./event_groups.o
+ .data          0x0000000000800100        0x0 ./list.o
+ .data          0x0000000000800100        0x0 ./main.o
+ .data          0x0000000000800100        0x0 ./queue.o
+ .data          0x0000000000800100        0x0 ./tasks.o
+ .data          0x0000000000800100        0x0 ./timers.o
+ .data          0x0000000000800100        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
+ .data          0x0000000000800100        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_copy_data.o)
+ .data          0x0000000000800100        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_clear_bss.o)
+ .data          0x0000000000800100        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libc.a(memcpy.o)
+ *(.data*)
+ .data.xFreeBytesRemaining
+                0x0000000000800100        0x2 ./portable/MemMang/heap_2.o
+ .data.xNextTaskUnblockTime
+                0x0000000000800102        0x2 ./tasks.o
+ *(.gnu.linkonce.d*)
+ *(.rodata)
+ .rodata        0x0000000000800104        0x9 ./main.o
+ .rodata        0x000000000080010d        0x5 ./tasks.o
+ *(.rodata*)
+ .rodata.heapSTRUCT_SIZE
+                0x0000000000800112        0x2 ./portable/MemMang/heap_2.o
+ *(.gnu.linkonce.r*)
+                0x0000000000800114                . = ALIGN (0x2)
+                0x0000000000800114                _edata = .
+                0x0000000000800114                PROVIDE (__data_end, .)
+
+.bss            0x0000000000800114      0x678
+                0x0000000000800114                PROVIDE (__bss_start, .)
+ *(.bss)
+ .bss           0x0000000000800114        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+ .bss           0x0000000000800114        0x0 ./portable/MemMang/heap_2.o
+ .bss           0x0000000000800114        0x0 ./portable/GCC/ATMega328p/port.o
+ .bss           0x0000000000800114        0x0 ./croutine.o
+ .bss           0x0000000000800114        0x0 ./event_groups.o
+ .bss           0x0000000000800114        0x0 ./list.o
+ .bss           0x0000000000800114        0x0 ./main.o
+ .bss           0x0000000000800114        0x0 ./queue.o
+ .bss           0x0000000000800114        0x0 ./tasks.o
+ .bss           0x0000000000800114        0x0 ./timers.o
+ .bss           0x0000000000800114        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
+ .bss           0x0000000000800114        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_copy_data.o)
+ .bss           0x0000000000800114        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_clear_bss.o)
+ .bss           0x0000000000800114        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libc.a(memcpy.o)
+ *(.bss*)
+ .bss.ucHeap    0x0000000000800114      0x5dc ./portable/MemMang/heap_2.o
+ .bss.xStart    0x00000000008006f0        0x4 ./portable/MemMang/heap_2.o
+ .bss.xEnd      0x00000000008006f4        0x4 ./portable/MemMang/heap_2.o
+ .bss.xHeapHasBeenInitialised.2022
+                0x00000000008006f8        0x1 ./portable/MemMang/heap_2.o
+ .bss.pxReadyCoRoutineLists
+                0x00000000008006f9       0x12 ./croutine.o
+ .bss.xDelayedCoRoutineList1
+                0x000000000080070b        0x9 ./croutine.o
+ .bss.xDelayedCoRoutineList2
+                0x0000000000800714        0x9 ./croutine.o
+ .bss.pxDelayedCoRoutineList
+                0x000000000080071d        0x2 ./croutine.o
+ .bss.pxOverflowDelayedCoRoutineList
+                0x000000000080071f        0x2 ./croutine.o
+ .bss.xPendingReadyCoRoutineList
+                0x0000000000800721        0x9 ./croutine.o
+ .bss.pxCurrentCoRoutine
+                0x000000000080072a        0x2 ./croutine.o
+                0x000000000080072a                pxCurrentCoRoutine
+ .bss.uxTopCoRoutineReadyPriority
+                0x000000000080072c        0x1 ./croutine.o
+ .bss.xCoRoutineTickCount
+                0x000000000080072d        0x2 ./croutine.o
+ .bss.xLastTickCount
+                0x000000000080072f        0x2 ./croutine.o
+ .bss.xPassedTicks
+                0x0000000000800731        0x2 ./croutine.o
+ .bss.pxCurrentTCB
+                0x0000000000800733        0x2 ./tasks.o
+                0x0000000000800733                pxCurrentTCB
+ .bss.pxReadyTasksLists
+                0x0000000000800735       0x24 ./tasks.o
+ .bss.xDelayedTaskList1
+                0x0000000000800759        0x9 ./tasks.o
+ .bss.xDelayedTaskList2
+                0x0000000000800762        0x9 ./tasks.o
+ .bss.pxDelayedTaskList
+                0x000000000080076b        0x2 ./tasks.o
+ .bss.pxOverflowDelayedTaskList
+                0x000000000080076d        0x2 ./tasks.o
+ .bss.xPendingReadyList
+                0x000000000080076f        0x9 ./tasks.o
+ .bss.xTasksWaitingTermination
+                0x0000000000800778        0x9 ./tasks.o
+ .bss.uxTasksDeleted
+                0x0000000000800781        0x1 ./tasks.o
+ .bss.uxCurrentNumberOfTasks
+                0x0000000000800782        0x1 ./tasks.o
+ .bss.xTickCount
+                0x0000000000800783        0x2 ./tasks.o
+ .bss.uxTopReadyPriority
+                0x0000000000800785        0x1 ./tasks.o
+ .bss.xSchedulerRunning
+                0x0000000000800786        0x1 ./tasks.o
+ .bss.uxPendedTicks
+                0x0000000000800787        0x1 ./tasks.o
+ .bss.xYieldPending
+                0x0000000000800788        0x1 ./tasks.o
+ .bss.xNumOfOverflows
+                0x0000000000800789        0x1 ./tasks.o
+ .bss.uxTaskNumber
+                0x000000000080078a        0x1 ./tasks.o
+ .bss.uxSchedulerSuspended
+                0x000000000080078b        0x1 ./tasks.o
+ *(COMMON)
+                0x000000000080078c                PROVIDE (__bss_end, .)
+                0x00000000000041ea                __data_load_start = LOADADDR (.data)
+                0x00000000000041fe                __data_load_end = (__data_load_start + SIZEOF (.data))
+
+.noinit         0x000000000080078c        0x0
+                [!provide]                        PROVIDE (__noinit_start, .)
+ *(.noinit*)
+                [!provide]                        PROVIDE (__noinit_end, .)
+                0x000000000080078c                _end = .
+                [!provide]                        PROVIDE (__heap_start, .)
+
+.eeprom         0x0000000000810000        0x0
+ *(.eeprom*)
+                0x0000000000810000                __eeprom_end = .
+
+.fuse
+ *(.fuse)
+ *(.lfuse)
+ *(.hfuse)
+ *(.efuse)
+
+.lock
+ *(.lock*)
+
+.signature
+ *(.signature*)
+
+.user_signatures
+ *(.user_signatures*)
+
+.stab           0x0000000000000000     0x7a70
+ *(.stab)
+ .stab          0x0000000000000000      0xba0 ./portable/MemMang/heap_2.o
+ .stab          0x0000000000000ba0      0x9e4 ./portable/GCC/ATMega328p/port.o
+                                        0xdbc (size before relaxing)
+ .stab          0x0000000000001584      0xaf8 ./croutine.o
+                                        0xe4c (size before relaxing)
+ .stab          0x000000000000207c      0xe10 ./event_groups.o
+                                       0x11f4 (size before relaxing)
+ .stab          0x0000000000002e8c      0x630 ./list.o
+                                        0x948 (size before relaxing)
+ .stab          0x00000000000034bc      0x450 ./main.o
+                                        0x7f8 (size before relaxing)
+ .stab          0x000000000000390c     0x1b00 ./queue.o
+                                       0x1f50 (size before relaxing)
+ .stab          0x000000000000540c     0x231c ./tasks.o
+                                       0x2730 (size before relaxing)
+ .stab          0x0000000000007728      0x348 ./timers.o
+                                        0x78c (size before relaxing)
+
+.stabstr        0x0000000000000000     0x39ce
+ *(.stabstr)
+ .stabstr       0x0000000000000000     0x39ce ./portable/MemMang/heap_2.o
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x0000000000000000       0x11
+ *(.comment)
+ .comment       0x0000000000000000       0x11 ./portable/MemMang/heap_2.o
+                                         0x12 (size before relaxing)
+ .comment       0x0000000000000011       0x12 ./portable/GCC/ATMega328p/port.o
+ .comment       0x0000000000000011       0x12 ./croutine.o
+ .comment       0x0000000000000011       0x12 ./event_groups.o
+ .comment       0x0000000000000011       0x12 ./list.o
+ .comment       0x0000000000000011       0x12 ./main.o
+ .comment       0x0000000000000011       0x12 ./queue.o
+ .comment       0x0000000000000011       0x12 ./tasks.o
+ .comment       0x0000000000000011       0x12 ./timers.o
+
+.note.gnu.avr.deviceinfo
+                0x0000000000000000       0x40
+ .note.gnu.avr.deviceinfo
+                0x0000000000000000       0x40 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+
+.note.gnu.build-id
+ *(.note.gnu.build-id)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges
+ *(.debug_aranges)
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info     0x0000000000000000      0x5f4
+ *(.debug_info .gnu.linkonce.wi.*)
+ .debug_info    0x0000000000000000      0x5f4 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+
+.debug_abbrev   0x0000000000000000      0x5a2
+ *(.debug_abbrev)
+ .debug_abbrev  0x0000000000000000      0x5a2 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+
+.debug_line     0x0000000000000000       0x1a
+ *(.debug_line .debug_line.* .debug_line_end)
+ .debug_line    0x0000000000000000       0x1a /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+
+.debug_frame
+ *(.debug_frame)
+
+.debug_str      0x0000000000000000      0x208
+ *(.debug_str)
+ .debug_str     0x0000000000000000      0x208 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+
+.debug_loc
+ *(.debug_loc)
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_pubtypes
+ *(.debug_pubtypes)
+
+.debug_ranges
+ *(.debug_ranges)
+
+.debug_macro
+ *(.debug_macro)
+OUTPUT(rtos_sem.elf elf32-avr)
+LOAD linker stubs
